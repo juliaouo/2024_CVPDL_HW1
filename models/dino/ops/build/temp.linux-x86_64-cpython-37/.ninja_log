@@ -1,0 +1,5 @@
+# ninja log v6
+0	4085	1729098699485495546	/tmp2/julialin/DINO/models/dino/ops/build/temp.linux-x86_64-cpython-37/tmp2/julialin/DINO/models/dino/ops/src/cpu/ms_deform_attn_cpu.o	de86cc27d5ab5ce2
+2	23480	1729098699487495594	/tmp2/julialin/DINO/models/dino/ops/build/temp.linux-x86_64-cpython-37/tmp2/julialin/DINO/models/dino/ops/src/vision.o	464beee5e8bdef8c
+129	7274	1729099679437849754	/tmp2/julialin/DINO/models/dino/ops/build/temp.linux-x86_64-cpython-37/tmp2/julialin/DINO/models/dino/ops/src/cpu/ms_deform_attn_cpu.o	f39a9d043bd936e9
+131	32941	1729099705086478831	/tmp2/julialin/DINO/models/dino/ops/build/temp.linux-x86_64-cpython-37/tmp2/julialin/DINO/models/dino/ops/src/vision.o	d240ac1395a46849
