@@ -66,7 +66,7 @@ COCODIR/
   ├── test/
   └── annotations/
   	├── instances_train.json
-  	└── instances_val.json
+  	├── instances_val.json
     └── instances_test.json
 ```
 
@@ -113,8 +113,7 @@ And run:
 python run_inference.py --model_config /path/to/your/config/DINO/DINO_4scale_swin_custom.py \
 --checkpoint /path/to/your/checkpoint_best_regular.pth --coco_path /project/n/julialin/hw1/data/coco_format --mode test
 ```
-`--mode` can use "train", "val" or "test"
-The result will be saved in the `out/result.json`. You can use `--output` to change the output path.
+The result will be saved in the `out/result.json`. You can use `--output` to change the output path. `--mode` can use "train", "val" or "test".
 
 The output data structure is as follows:
 ```
