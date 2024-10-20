@@ -18,6 +18,7 @@ def parse_args():
     parser.add_argument('--model_config', type=str, required=True, help='Path to the model config file')
     parser.add_argument('--checkpoint', type=str, required=True, help='Path to the model checkpoint')
     parser.add_argument('--coco_path', type=str, required=True, help='Path to COCO dataset')
+    parser.add_argument('--mode', type=str, required=True, help='train, val or test')
     parser.add_argument('--output', type=str, default="out/result.json", help='Output file name for results')
     parser.add_argument('--num_workers', type=int, default=10, help='Number of data loading workers')
     return parser.parse_args()
@@ -83,7 +84,7 @@ def main():
         return final_res
 
     # Build dataset and dataloader
-    dataset_val = build_dataset(image_set='val', args=config_args)
+    dataset_val = build_dataset(image_set=args.mode, args=config_args)
     sampler_val = torch.utils.data.SequentialSampler(dataset_val)
     data_loader_val = DataLoader(dataset_val, 2, sampler=sampler_val,
                                 drop_last=False, collate_fn=utils.collate_fn, num_workers=config_args.num_workers)

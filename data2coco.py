@@ -14,9 +14,9 @@ if mode == "test":
 else:
     annotation_dir = os.path.join(input_dir, f"{mode}/labels")
 if mode == "valid":
-    output_json = os.path.join(output_dir, f"instances_val2017.json")
+    output_json = os.path.join(output_dir, f"instances_val.json")
 else:
-    output_json = os.path.join(output_dir, f"instances_{mode}2017.json")
+    output_json = os.path.join(output_dir, f"instances_{mode}.json")
 
 categories = [
     {"id": 0, "name": "person"},

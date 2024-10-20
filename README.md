@@ -49,8 +49,8 @@ After downloading the dataset, covert the dataset to COCO annotation format
 Modify `data2coco.py`:
 ```
 mode = "valid" # train, valid, test
-input_dir = "your_input_dir_path"
-output_dir = "your_output_dir_path"
+input_dir = "path/to/your/input_dir"
+output_dir = "path/to/your/output_dir"
 ```
 
 Then run:
@@ -61,11 +61,13 @@ python data2coco.py
 The folder structure and names should be like this:
 ```
 COCODIR/
-  ├── train2017/
-  ├── val2017/
+  ├── train/
+  ├── val/
+  ├── test/
   └── annotations/
-  	├── instances_train2017.json
-  	└── instances_val2017.json
+  	├── instances_train.json
+  	└── instances_val.json
+    └── instances_test.json
 ```
 
 
@@ -105,7 +107,14 @@ Modify `run_inference.py` to use specific GPU:
 ```
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 ```
-The result will be saved in the `out/result.json`.You can use `--output` to change the output path.
+
+And run:
+```
+python run_inference.py --model_config /path/to/your/config/DINO/DINO_4scale_swin_custom.py \
+--checkpoint /path/to/your/checkpoint_best_regular.pth --coco_path /project/n/julialin/hw1/data/coco_format --mode test
+```
+`--mode` can use "train", "val" or "test"
+The result will be saved in the `out/result.json`. You can use `--output` to change the output path.
 
 The output data structure is as follows:
 ```
@@ -145,7 +154,7 @@ And the final result structure is as follows:
 }
 ```
 
-Run:
+Run to calculate mAP(50-95):
 
 ```
 python path/to/eval.py path/to/result path/to/valid_target.json
