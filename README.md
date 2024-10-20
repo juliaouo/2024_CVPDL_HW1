@@ -67,7 +67,7 @@ COCODIR/
   └── annotations/
   	├── instances_train.json
   	├── instances_val.json
-    └── instances_test.json
+   └── instances_test.json
 ```
 
 
