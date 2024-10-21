@@ -1,5 +1,5 @@
 # 2024_CVPDL_HW1
-2024 Computer Vision Practice with Deep Learning HW1
+2024 Computer Vision Practice with Deep Learning HW1 - Object Detection
 > name: 林怡萱
 
 > id: R13944021
@@ -100,7 +100,6 @@ bash scripts/DINO_train_swin.sh /path/to/your/custom/data /path/to/backbone 0 \
 ```
 The `0` refers to setting CUDA_VISIBLE_DEVICES=0, which can be changed
 
----
 ---
 
 ### *Test*
