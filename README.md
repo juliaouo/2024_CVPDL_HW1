@@ -74,7 +74,7 @@ COCODIR/
 
 ## Run
 
-### Fine-tune
+### *Fine-tune*
 
 1. Download pretrianed models
 
@@ -100,8 +100,12 @@ bash scripts/DINO_train_swin.sh /path/to/your/custom/data /path/to/backbone 0 \
 ```
 The `0` refers to setting CUDA_VISIBLE_DEVICES=0, which can be changed
 
+---
+---
 
-### Test
+### *Test*
+
+**My fine-tuned model can be downloaded from [Google Drive](https://drive.google.com/file/d/1yr1BKH_VrC51cKn_5RKG7_b_zMdExSr1/view?usp=sharing)**
 
 Modify `run_inference.py` to use specific GPU:
 ```

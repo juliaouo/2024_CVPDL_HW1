@@ -25,3 +25,4 @@ model_zoo/
 model_zoo_old/
 out/*.json
 *.json
+*.zip
